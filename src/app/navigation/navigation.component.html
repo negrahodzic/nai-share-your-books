@@ -1,0 +1,7 @@
+<h1>navigation works!</h1>
+<p>Home</p>
+<p>Catalog / Search</p>
+<p>Support</p>
+<app-logged-in [hidden] = "!isLoggedIn" (onLogout) = "changeLoginState($event)"></app-logged-in>
+<app-logged-out [hidden]="isLoggedIn" (onLogin)="changeLoginState($event)"></app-logged-out>
+
