@@ -3,5 +3,5 @@
 <p>Catalog / Search</p>
 <p>Support</p>
 <app-logged-in [hidden] = "!isLoggedIn" (onLogout) = "changeLoginState($event)"></app-logged-in>
-<app-logged-out [hidden]="isLoggedIn" (onLogin)="changeLoginState($event)"></app-logged-out>
+<app-logged-out [hidden]="isLoggedIn" (onShowLoginForm)="showLoginForm($event)"></app-logged-out>
 

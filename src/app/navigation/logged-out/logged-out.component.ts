@@ -7,15 +7,17 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class LoggedOutComponent implements OnInit {
 
+  isLoginFormVisible = false;
   constructor() { }
 
   ngOnInit(): void {
   }
 
   @Output() onLogin = new EventEmitter<boolean>();
-  login(){
-    this.onLogin.emit(true);
-
+  @Output() onShowLoginForm = new EventEmitter<boolean>();
+  showLoginForm(){
+    this.isLoginFormVisible = !this.isLoginFormVisible;
+    this.onShowLoginForm.emit(this.isLoginFormVisible);
   }
 
 }

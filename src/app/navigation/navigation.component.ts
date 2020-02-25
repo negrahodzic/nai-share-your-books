@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-navigation',
@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class NavigationComponent implements OnInit {
 
   isLoggedIn : boolean;
+  isLoginFormVisible = false;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -15,7 +17,11 @@ export class NavigationComponent implements OnInit {
 
   changeLoginState(val : boolean){ 
     this.isLoggedIn = val;    
+  }
 
+  showLoginForm(val : boolean){
+    this.isLoginFormVisible = val;
+    console.log("navigation hvata: "+ this.isLoginFormVisible);
   }
 
 }

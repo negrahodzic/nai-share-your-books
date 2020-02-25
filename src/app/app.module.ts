@@ -9,6 +9,7 @@ import { IntroductionComponent } from './home/introduction/introduction.componen
 import { TopBooksComponent } from './home/top-books/top-books.component';
 import { LoggedInComponent } from './navigation/logged-in/logged-in.component';
 import { LoggedOutComponent } from './navigation/logged-out/logged-out.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { LoggedOutComponent } from './navigation/logged-out/logged-out.component
     TopBooksComponent,
     LoggedInComponent,
     LoggedOutComponent,
+    LoginFormComponent,
   ],
   imports: [
     BrowserModule,
